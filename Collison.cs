@@ -11,6 +11,13 @@ public class Collison : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-      Debug.Log("Ouch");   
+     if (other.tag == "Package")
+     {
+      Debug.Log("Package picked up");
+     }
+
+     if(other.tag == "Customer"){
+      Debug.Log("Package Devilered");
+     }
     }
 }
